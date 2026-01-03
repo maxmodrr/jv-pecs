@@ -17,7 +17,6 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
 
     @Override
     public List<T> getAll(Class<? extends T> type) {
-
         if (type == Bulldozer.class) {
             return (List<T>) bulldozerProducer.get();
         }
@@ -40,6 +39,7 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
         }
     }
 
+    @Override
     public void startWorking(List<? extends Machine> list) {
         for (Machine item : list) {
             item.doWork();
