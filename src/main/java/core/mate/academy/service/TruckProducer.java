@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TruckProducer implements MachineProducer<Truck> {
     @Override
-    public List<? extends Truck> get() {
+    public List<Truck> get() {
         List<Truck> list = new ArrayList<>();
         list.add(new Truck());
         return list;
